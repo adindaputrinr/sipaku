@@ -1,30 +1,17 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such <p align="center"><a href="https://polindra.ac.id/" target="_blank"><img src="https://rekreartive.com/wp-content/uploads/2018/11/Logo-Polindra-Politeknik-Negeri-Indramayu-Original.png.webp" width="200" alt="Logo Polindra"></a></p>
-
 ## Profil Mitra
 
 <p align="center"><a href="https://www.instagram.com/klinikgigi_talkdent/?hl=id" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1qwmDtIktL3tNpvosu5piCPUjYX9JvnA9" width="100" alt="Logo Mitra"></a></p>
 
-Talkdent Dental Clinic Klinik terbaik, terbesar, terbaru, di kota Jatibarang Indramayu. Terdiri dari dokter gigi dan dokter gigi spesialis berpengalaman, trampil dan profesional. Layanan perawatan gigi, estetika gigi.
+Mitranya masih OTW
 
 ## Team
 
-Team proyek 3 berasal dari kelompok 5 kelas D4RPL3 tahun 2023. yang beranggotakan:
+Team proyek 3 berasal dari kelompok 7 kelas D4RPL3 tahun 2023. yang beranggotakan:
 
-- **[Lukman Hakim](https://www.instagram.com/lukmanhkmz_/)**
-- **[Sri Wahyuni](https://www.instagram.com/_ayuwyuni/)**
-- **[Dea Faradisa](https://www.instagram.com/deafaradisa/)**
-- **[Siti Putri Rohayati](https://www.instagram.com/spptrii/)**
+- **[M Rizky Pratama](https://www.instagram.com/)**
+- **[Bidin Wahyudin](https://www.instagram.com/)**
+- **[Lusiyana](https://www.instagram.com/lusiiy.ai/)**
+- **[Adinda Putri](https://www.instagram.com/adindapnry/)**
 
 ## Installation
 
@@ -34,7 +21,7 @@ Laravel 10.x menggunakan PHP versi 8.0. Jadi kalau belum update dulu. Lalu pasti
 
 
 ```
-git clone https://github.com/Lukman08/proyek3-web.git
+git clone https://github.com/adindaputrinr/sipaku.git
 ```
 
 2. Masuk ke folder projek yang sudah di clone, klik kanan git bash here
@@ -86,11 +73,11 @@ git init
 ```
 
 ```
-git remote add origin https://github.com/Lukman08/proyek3-web.git
+git remote add origin https://github.com/adindaputrinr/sipaku.git
 ```
 
 ```
-git pull https://github.com/Lukman08/proyek3-web.git
+git pull https://github.com/adindaputrinr/sipaku.git
 ```
 
 2. Edit projek sesuai keinginan
@@ -109,7 +96,7 @@ git push origin master
 ```
 
 
-## Kelompok 5 - D4RPL3 - 2023as:
+## Kelompok 7 - D4RPL3 - 2023as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
