@@ -42,21 +42,21 @@
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('datapengguna')}}">
+    <a class="nav-link" href="{{url('datagejala')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>Data Gejala</span>
     </a>
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('datapengguna')}}">
+    <a class="nav-link" href="{{url('datapenyakit')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>Data Penyakit</span>
     </a>
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('datapengguna')}}">
+    <a class="nav-link" href="{{url('basispengetahuan')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>Basis Pengetahuan</span>
     </a>

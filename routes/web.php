@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [HomeController::class, 'index']);
 Route::get('/datapengguna', [HomeController::class, 'datapengguna']);
+Route::get('/datagejala', [GejalaController::class, 'index']);
