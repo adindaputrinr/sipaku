@@ -3,6 +3,8 @@
 use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/admin', [HomeController::class, 'index']);
 Route::get('/datapengguna', [HomeController::class, 'datapengguna']);
 Route::get('/datagejala', [GejalaController::class, 'index']);
+Route::get('logout', [LoginController::class, 'logout']);
