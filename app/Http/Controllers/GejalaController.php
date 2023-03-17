@@ -13,8 +13,8 @@ class GejalaController extends Controller
         return view('admin.page.datagejala', compact('datagejala'));
     }
 
-    public function create()
-    {
-        return view('admin.page.tambahgejala');
-    }
+    // public function create()
+    // {
+    //     return view('admin.page.tambahgejala');
+    // }
 }
