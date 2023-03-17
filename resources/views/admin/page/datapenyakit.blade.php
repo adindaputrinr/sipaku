@@ -14,7 +14,7 @@
 <!-- DataTales Example -->
 <div class="card border-0 shadow rounded">
     <div class="card-body">
-        <h6 class="m-0 font-weight-bold text-primary">Tambah Data</h6>
+        <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">

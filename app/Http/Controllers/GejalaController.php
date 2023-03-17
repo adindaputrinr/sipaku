@@ -12,4 +12,9 @@ class GejalaController extends Controller
         $datagejala = Gejala::latest()->get();
         return view('admin.page.datagejala', compact('datagejala'));
     }
+
+    public function create()
+    {
+        return view('admin.page.tambahgejala');
+    }
 }
