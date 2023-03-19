@@ -14,7 +14,7 @@
 <!-- DataTales Example -->
 <div class="card border-0 shadow rounded">
     <div class="card-body">
-        <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
+        <a href="{{ route('penyakit.create') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -25,7 +25,8 @@
                         <th>Id</th>
                         <th>Kode Penyakit</th>
                         <th>Penyakit</th>
-                        <th>Aksi</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -34,7 +35,8 @@
                         <th>Id</th>
                         <th>Kode Penyakit</th>
                         <th>Penyakit</th>
-                        <th>Aksi</th>
+                        <th>Edit</th>
+                        <th>Hapus</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -44,7 +46,16 @@
                         <td>{{$penyakit -> id}}</td>
                         <td>{{$penyakit -> kodePenyakit}}</td>
                         <td>{{$penyakit -> penyakit}}</td>
-                        <td>Aksi</td>
+                        <td>
+                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
+                        </td>
+                        <td>
+                        <form action="{{ route('penyakit.destroy', $penyakit->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

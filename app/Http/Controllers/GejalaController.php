@@ -13,8 +13,30 @@ class GejalaController extends Controller
         return view('admin.page.datagejala', compact('datagejala'));
     }
 
-    // public function create()
-    // {
-    //     return view('admin.page.tambahgejala');
-    // }
+    public function create()
+    {
+        
+        return view('admin.page.create_gejala');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'kodeGejala' => 'required',
+            'gejala' => 'required'
+        ]);
+
+        Gejala::create($request->all());
+
+        return redirect()->route('gejala.index')
+            ->with('success', 'Data gejala berhasil ditambahkan.');
+    }
+
+    public function destroy($id)
+    {
+        $gejala = Gejala::find($id);
+        $gejala->delete();
+
+        return redirect()->route('gejala.index');
+    }
 }

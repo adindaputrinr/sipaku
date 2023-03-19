@@ -28,6 +28,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [HomeController::class, 'index']);
 Route::get('/datapengguna', [HomeController::class, 'datapengguna']);
-Route::get('/datagejala', [GejalaController::class, 'index']);
-Route::get('/datapenyakit', [PenyakitController::class, 'index']);
 Route::get('logout', [LoginController::class, 'logout']);
+
+Route::get('/datagejala', [GejalaController::class, 'index'])->name('gejala.index');
+Route::get('/datagejala/create', [GejalaController::class, 'create'])->name('gejala.create');
+Route::post('/datagejala', [GejalaController::class, 'store'])->name('gejala.store');
+Route::delete('/datagejala/{id}', [GejalaController::class, 'destroy'])->name('gejala.destroy');
+
+Route::get('/datapenyakit', [PenyakitController::class, 'index'])->name('penyakit.index');
+Route::get('/datapenyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');
+Route::post('/datapenyakit', [PenyakitController::class, 'store'])->name('penyakit.store');
+Route::delete('/datapenyakit/{id}', [PenyakitController::class, 'destroy'])->name('penyakit.destroy');
