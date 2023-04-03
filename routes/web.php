@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\RuleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,5 @@ Route::get('/datapenyakit', [PenyakitController::class, 'index'])->name('penyaki
 Route::get('/datapenyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');
 Route::post('/datapenyakit', [PenyakitController::class, 'store'])->name('penyakit.store');
 Route::delete('/datapenyakit/{id}', [PenyakitController::class, 'destroy'])->name('penyakit.destroy');
+
+Route::get('/rule', [RuleController::class, 'index'])->name('rule.index');

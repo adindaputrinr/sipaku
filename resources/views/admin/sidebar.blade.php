@@ -56,9 +56,9 @@
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('basispengetahuan')}}">
+    <a class="nav-link" href="{{url('rule')}}">
         <i class="fas fa-fw fa-cog"></i>
-        <span>Basis Pengetahuan</span>
+        <span>Rule</span>
     </a>
 </li>
 
@@ -71,14 +71,14 @@
 </div>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('datapengguna')}}">
+    <a class="nav-link" href="{{url('diagnosa')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>Diagnosa Penyakit</span>
     </a>
 </li>
 
 <li class="nav-item active">
-    <a class="nav-link" href="{{url('datapengguna')}}">
+    <a class="nav-link" href="{{url('riwayat')}}">
         <i class="fas fa-fw fa-cog"></i>
         <span>Riwayat</span>
     </a>

@@ -9,6 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{{ asset('asset/vendor/fontawesome-free/css/all.min.css') }}">
+
     <title>SB Admin 2 - Dashboard</title>
 
     @include('admin.asset_navbar')

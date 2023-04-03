@@ -9,12 +9,12 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Kelola Data Gejala</h1>
+<h1 class="h3 mb-2 text-gray-800">Kelola Data Rule</h1>
 
 <!-- DataTales Example -->
 <div class="card border-0 shadow rounded">
     <div class="card-body">
-        <a href="{{ route('gejala.create') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
+        <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -23,7 +23,7 @@
                     <tr>
                         <th>No</th>
                         <th>Id</th>
-                        <th>Kode Gejala</th>
+                        <th>Penyakit</th>
                         <th>Gejala</th>
                         <th>Edit</th>
                         <th>Hapus</th>
@@ -33,31 +33,39 @@
                     <tr>
                         <th>No</th>
                         <th>Id</th>
-                        <th>Kode Gejala</th>
+                        <th>Penyakit</th>
                         <th>Gejala</th>
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
                 </tfoot>
                 <tbody>
-                    @foreach($datagejala as $gejala)
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>P01</td>
+                        <td>G01, G02, G03</td>
+                        <td>Edit</td>
+                        <td>Hapus</td>
+                    </tr>
+                    {{-- @foreach($datapenyakit as $penyakit)
                     <tr>
                         <td>{{$loop -> iteration}}</td>
-                        <td>{{$gejala -> id}}</td>
-                        <td>{{$gejala -> kodeGejala}}</td>
-                        <td>{{$gejala -> gejala}}</td>
+                        <td>{{$penyakit -> id}}</td>
+                        <td>{{$penyakit -> kodePenyakit}}</td>
+                        <td>{{$penyakit -> penyakit}}</td>
                         <td>
-                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-edit"></i></a>
+                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
                         </td>
                         <td>
-                        <form action="{{ route('gejala.destroy', $gejala->id) }}" method="POST">
+                        <form action="{{ route('penyakit.destroy', $penyakit->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="fa-solid fa-trash"></i></button>
                         </form>
                         </td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
         </div>
