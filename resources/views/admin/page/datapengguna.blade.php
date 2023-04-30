@@ -13,9 +13,9 @@
 
 <!-- DataTales Example -->
 <div class="card border-0 shadow rounded">
-    <div class="card-body">
+    <!-- <div class="card-body">
         <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
-    </div>
+    </div> -->
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
