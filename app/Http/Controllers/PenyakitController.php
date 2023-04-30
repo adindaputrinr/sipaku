@@ -39,4 +39,23 @@ class PenyakitController extends Controller
 
         return redirect()->route('penyakit.index');
     }
+
+    public function edit($id)
+    {
+        $penyakit = Penyakit::findOrFail($id);
+
+        return view('admin.page.edit_penyakit', compact('penyakit'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'kodePenyakit' => 'required|max:255',
+            'penyakit' => 'required|max:255',
+    ]);
+
+        Penyakit::whereId($id)->update($validatedData);
+
+        return redirect()->route('penyakit.index')->with('success', 'Data gejala berhasil diupdate.');
+    }
 }

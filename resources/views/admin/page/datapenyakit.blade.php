@@ -47,7 +47,7 @@
                         <td>{{$penyakit -> kodePenyakit}}</td>
                         <td>{{$penyakit -> penyakit}}</td>
                         <td>
-                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
+                            <a href="{{ route('penyakit.edit', $penyakit->id) }}" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
                         </td>
                         <td>
                         <form action="{{ route('penyakit.destroy', $penyakit->id) }}" method="POST">

@@ -42,6 +42,8 @@ Route::get('/datapenyakit', [PenyakitController::class, 'index'])->name('penyaki
 Route::get('/datapenyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');
 Route::post('/datapenyakit', [PenyakitController::class, 'store'])->name('penyakit.store');
 Route::delete('/datapenyakit/{id}', [PenyakitController::class, 'destroy'])->name('penyakit.destroy');
+Route::get('/datapenyakit/{id}/edit', [PenyakitController::class, 'edit'])->name('penyakit.edit');
+Route::put('/datapenyakit/{id}', [PenyakitController::class, 'update'])->name('penyakit.update');
 
 Route::get('/rule', [RuleController::class, 'index'])->name('rule.index');
 Route::get('/rule/create', [RuleController::class, 'create'])->name('rule.create');
