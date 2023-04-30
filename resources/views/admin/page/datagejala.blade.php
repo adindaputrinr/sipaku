@@ -47,7 +47,7 @@
                         <td>{{$gejala -> kodeGejala}}</td>
                         <td>{{$gejala -> gejala}}</td>
                         <td>
-                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-edit"></i></a>
+                            <a href="{{ route('gejala.edit', $gejala->id) }}" class="btn btn-warning"><i class="fa-solid fa-edit"></i></a>
                         </td>
                         <td>
                         <form action="{{ route('gejala.destroy', $gejala->id) }}" method="POST">

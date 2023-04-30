@@ -35,6 +35,8 @@ Route::get('/datagejala', [GejalaController::class, 'index'])->name('gejala.inde
 Route::get('/datagejala/create', [GejalaController::class, 'create'])->name('gejala.create');
 Route::post('/datagejala', [GejalaController::class, 'store'])->name('gejala.store');
 Route::delete('/datagejala/{id}', [GejalaController::class, 'destroy'])->name('gejala.destroy');
+Route::get('/datagejala/{id}/edit', [GejalaController::class, 'edit'])->name('gejala.edit');
+Route::put('/datagejala/{id}', [GejalaController::class, 'update'])->name('gejala.update');
 
 Route::get('/datapenyakit', [PenyakitController::class, 'index'])->name('penyakit.index');
 Route::get('/datapenyakit/create', [PenyakitController::class, 'create'])->name('penyakit.create');

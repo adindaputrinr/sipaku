@@ -39,4 +39,24 @@ class GejalaController extends Controller
 
         return redirect()->route('gejala.index');
     }
+
+    public function edit($id)
+    {
+        $gejala = Gejala::findOrFail($id);
+
+        return view('admin.page.edit_gejala', compact('gejala'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'kodeGejala' => 'required|max:255',
+            'gejala' => 'required|max:255',
+    ]);
+
+        Gejala::whereId($id)->update($validatedData);
+
+        return redirect()->route('gejala.index')->with('success', 'Data gejala berhasil diupdate.');
+    }
+
 }
