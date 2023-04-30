@@ -13,4 +13,9 @@ class Penyakit extends Model
         'kodePenyakit',
         'penyakit'
     ];
+
+    // public function rules()
+    // {
+    //     return $this->hasMany(Rule::class);
+    // }
 }

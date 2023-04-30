@@ -12,8 +12,11 @@ class RuleController extends Controller
      */
     public function index()
     {
+        $rules = Rule::all();
+
+        return view('admin.page.rule', compact('rules'));
         // $rule = Rule::latest()->get();
-        return view('admin.page.rule');
+        // return view('admin.page.rule');
     }
 
     /**

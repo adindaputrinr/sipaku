@@ -42,3 +42,6 @@ Route::post('/datapenyakit', [PenyakitController::class, 'store'])->name('penyak
 Route::delete('/datapenyakit/{id}', [PenyakitController::class, 'destroy'])->name('penyakit.destroy');
 
 Route::get('/rule', [RuleController::class, 'index'])->name('rule.index');
+Route::get('/rule/create', [RuleController::class, 'create'])->name('rule.create');
+Route::post('/rule', [RuleController::class, 'store'])->name('rule.store');
+Route::delete('/rule/{id}', [RuleController::class, 'destroy'])->name('rule.destroy');
