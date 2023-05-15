@@ -18,11 +18,11 @@ class Rule extends Model
 
     public function gejalas()
     {
-        return $this->belongsToMany(Gejala::class);
+        return $this->belongsToMany(Gejala::class, 'kodeGejala', 'kodeGejala');
     }
 
-    public function penyakit()
+    public function penyakits()
     {
-        return $this->belongsTo(Penyakit::class);
+        return $this->belongsTo(Penyakit::class, 'kodePenyakit', 'kodePenyakit');
     }
 }

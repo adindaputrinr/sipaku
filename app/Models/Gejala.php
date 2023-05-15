@@ -14,8 +14,8 @@ class Gejala extends Model
         'gejala'
     ];
 
-    // public function rules()
-    // {
-    //     return $this->belongsToMany(Rule::class);
-    // }
+    public function rules()
+    {
+        return $this->hasMany(Rule::class, 'kodeGejala', 'kodeGejala');
+    }
 }

@@ -23,8 +23,10 @@
                     <tr>
                         <th>No</th>
                         <th>Id</th>
-                        <th>Penyakit</th>
-                        <th>Gejala</th>
+                        <th>Kode Rule</th>
+                        <th>Kode Gejala</th>
+                        <th>Kode Penyakit</th>
+                        <th>Tindakan</th>
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
@@ -33,27 +35,23 @@
                     <tr>
                         <th>No</th>
                         <th>Id</th>
-                        <th>Penyakit</th>
-                        <th>Gejala</th>
+                        <th>Kode Rule</th>
+                        <th>Kode Gejala</th>
+                        <th>Kode Penyakit</th>
+                        <th>Tindakan</th>
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>P01</td>
-                        <td>G01, G02, G03</td>
-                        <td>Edit</td>
-                        <td>Hapus</td>
-                    </tr>
-                    {{-- @foreach($datapenyakit as $penyakit)
+                    @foreach($datarule as $data)
                     <tr>
                         <td>{{$loop -> iteration}}</td>
-                        <td>{{$penyakit -> id}}</td>
-                        <td>{{$penyakit -> kodePenyakit}}</td>
-                        <td>{{$penyakit -> penyakit}}</td>
+                        <td>{{$data -> id}}</td>
+                        <td>{{$data -> kodeRule}}</td>
+                        <td>{{$data -> kodeGejala}}</td>
+                        <td>{{$data -> kodePenyakit}}</td>
+                        <td>{{$data -> tindakan}}</td>
                         <td>
                             <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
                         </td>
@@ -65,7 +63,7 @@
                         </form>
                         </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>

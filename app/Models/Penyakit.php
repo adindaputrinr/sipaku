@@ -14,8 +14,8 @@ class Penyakit extends Model
         'penyakit'
     ];
 
-    // public function rules()
-    // {
-    //     return $this->hasMany(Rule::class);
-    // }
+    public function rules()
+    {
+        return $this->hasMany(Rule::class, 'kodePenyakit', 'kodePenyakit');
+    }
 }
