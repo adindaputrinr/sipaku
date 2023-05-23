@@ -23,6 +23,6 @@ class Rule extends Model
 
     public function penyakits()
     {
-        return $this->belongsTo(Penyakit::class, 'kodePenyakit', 'kodePenyakit');
+        return $this->belongsTo(Penyakit::class, 'kodePenyakit', 'id');
     }
 }

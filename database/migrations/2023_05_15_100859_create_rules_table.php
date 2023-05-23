@@ -15,11 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('kodeRule');
             $table->string('kodeGejala');
-            $table->string('kodePenyakit');
+            $table->integer('kodePenyakit');
+            $table->string('tindakan');
             $table->timestamps();
 
-            $table->foreign('kodeGejala')->references('kodeGejala')->on('gejalas');
-            $table->foreign('kodePenyakit')->references('kodePenyakit')->on('penyakits');
+            // $table->foreign('kodeGejala')->references('kodeGejala')->on('gejalas');
+            // $table->foreign('kodePenyakit')->references('kodePenyakit')->on('penyakits');
         });
     }
 

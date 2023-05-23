@@ -53,10 +53,10 @@
                         <td>{{$data -> kodePenyakit}}</td>
                         <td>{{$data -> tindakan}}</td>
                         <td>
-                            <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
+                            <a href="{{ route('rule.edit', $rule->id) }}" class="btn btn-warning"><i class="fa-solid fa-edit"></i></a>
                         </td>
                         <td>
-                        <form action="{{ route('penyakit.destroy', $penyakit->id) }}" method="POST">
+                        <form action="{{ route('rule.destroy', $rule->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ini?')"><i class="fa-solid fa-trash"></i></button>
