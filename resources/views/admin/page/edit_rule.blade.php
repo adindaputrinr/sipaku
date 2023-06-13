@@ -5,57 +5,68 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Edit rule') }}</div>
+                    <div class="card-header">{{ __('Edit Rule') }}</div>
 
                     <div class="card-body">
-                        <form action="/datarule/{{ $rule->id }}" method="POST">
-                            @csrf
-                            @method('PUT')
-                            <input type="hidden" name="id" value="{{ $rule->id }}">
+                            <form action="{{ route('updaterule', $data->id) }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group">
+                                    <label>Penyakit</label>
+                                    <select name="id_penyakit" class="form-control" required>
+                                        <option value="" disabled>Pilih</option>
+                                        @foreach ($penyakit as $row)
+                                            <option value="{{ $row->id }}"
+                                                @if ($row->id == $data->id_penyakit) selected @endif>
+                                                {{ $row->kodePenyakit . ' - ' . $row->penyakit }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="kodeRule">Kode Rule</label>
-                                <input type="text" name="kodeRule" class="form-control @error('kodeRule') is-invalid @enderror" value="{{ old('kodeRule', $rule->kodeRule) }}" required autocomplete="kodeRule" autofocus>
-                                @error('kodeRule')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                                <div class="form-group">
+                                    <label>Daftar Gejala</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            @php
+                                                $gejalaCount = count($gejala);
+                                                $halfCount = ceil($gejalaCount / 2);
+                                            @endphp
+                                            @foreach ($gejala as $index => $row)
+                                                @if ($index < $halfCount)
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="daftargejala[]"
+                                                                value="{{ $row->kodeGejala }}"
+                                                                @if (in_array($row->kodeGejala, explode(' - ', $data->daftargejala))) checked @endif>
+                                                            {{ '(' . $row->kodeGejala . ') ' . $row->gejala }}
+                                                        </label>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                        <div class="col-md-6">
+                                            @foreach ($gejala as $index => $row)
+                                                @if ($index >= $halfCount)
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" name="daftargejala[]"
+                                                                value="{{ $row->kodeGejala }}"
+                                                                @if (in_array($row->kodeGejala, explode(' - ', $data->daftargejala))) checked @endif>
+                                                            {{ '(' . $row->kodeGejala . ') ' . $row->gejala }}
+                                                        </label>
+                                                    </div>
+                                                @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                    <button type="submit" class="btn btn-success">Simpan</button>
+                                 --}}
+                                <button type="submit" class="btn btn-primary">Perbarui</button>
+                                <a href="{{ route('indexrule') }}" class="btn btn-secondary">Batal</a>
+                            </form>
 
-                            <div class="form-group">
-                                <label for="kodeGejala">Kode Gejala</label>
-                                <input type="text" name="kodeGejala" class="form-control @error('kodeGejala') is-invalid @enderror" value="{{ old('kodeGejala', $gejala->kodeGejala) }}" required autocomplete="kodeGejala" autofocus>
-                                @error('kodeGejala')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="kodePenyakit">Kode Penyakit</label>
-                                <input type="text" name="kodePenyakit" class="form-control @error('kodePenyakit') is-invalid @enderror" value="{{ old('kodePenyakit', $penyakit->kodePenyakit) }}" required autocomplete="kodePenyakit" autofocus>
-                                @error('kodePenyakit')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label for="tindakan">Tindakan</label>
-                                <input type="text" name="tindakan" class="form-control @error('tindakan') is-invalid @enderror" value="{{ old('tindakan', $tindakan->tindakan) }}" required autocomplete="tindakan" autofocus>
-                                @error('tindakan')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Perbarui</button>
-                            <a href="{{ url('/datarule') }}" class="btn btn-secondary">Batal</a>
-                        </form>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DiagnosaController;
 use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\RuleController;
 
@@ -45,9 +46,11 @@ Route::delete('/datapenyakit/{id}', [PenyakitController::class, 'destroy'])->nam
 Route::get('/datapenyakit/{id}/edit', [PenyakitController::class, 'edit'])->name('penyakit.edit');
 Route::put('/datapenyakit/{id}', [PenyakitController::class, 'update'])->name('penyakit.update');
 //datarule
-Route::get('/rule', [RuleController::class, 'index'])->name('rule.index');
-Route::get('/rule/create', [RuleController::class, 'create'])->name('rule.create');
-Route::post('/rule', [RuleController::class, 'store'])->name('rule.store');
-Route::delete('/rule/{id}', [RuleController::class, 'destroy'])->name('rule.destroy');
-Route::get('/rule/{id}/edit', [RuleController::class, 'edit'])->name('rule.edit');
-Route::put('/rule/{id}', [RuleController::class, 'update'])->name('rule.update');
+Route::get('/rule', [RuleController::class, 'index'])->name('indexrule');
+Route::post('/rule/insertrule', [RuleController::class, 'insertrule'])->name('insertrule');
+Route::get('/editrule/{id}', [RuleController::class, 'editrule'])->name('editrule');
+Route::post('/updaterule/{id}', [RuleController::class, 'updaterule'])->name('updaterule');
+Route::delete('/deleterule/{id}', [RuleController::class, 'destroy'])->name('destroy');
+//diagnosa
+Route::get('/diagnosa', [DiagnosaController::class, 'diagnosa'])->name('diagnosa');
+Route::post('/insertdiagnosa', [DiagnosaController::class, 'insertdiagnosa'])->name('insertdiagnosa');
