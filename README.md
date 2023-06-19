@@ -1,6 +1,6 @@
 ## Profil Mitra
 
-<p align="center"><a href="https://www.instagram.com/klinikgigi_talkdent/?hl=id" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1qwmDtIktL3tNpvosu5piCPUjYX9JvnA9" width="100" alt="Logo Mitra"></a></p>
+<p align="center"><a href="https://www.instagram.com/klinikgigi_talkdent/?hl=id" target="_blank"><img src="https://drive.google.com/file/d/14xxKLrd5OCAs2MxBOhySWcqYY24hKuYS/view?usp=share_link" width="100" alt="Logo Mitra"></a></p>
 
 Mitranya masih OTW
 
